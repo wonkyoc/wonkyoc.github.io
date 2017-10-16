@@ -1,0 +1,4 @@
+- name: blog
+  descr: "개발 지식을 정리하기 위한 개인 블로그" 
+  image: pong.png
+  github: https://github.com/skia92/skia92.github.io
