@@ -23,12 +23,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  skia92
 
-# Build settings
+########################
+# Jekyll configuration
+########################
 markdown: kramdown
-theme: minima
+highlighter: rouge
 plugins:
   - jekyll-feed
-
+  - jemoji
+permalink: none
+theme: minima
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
