@@ -1,8 +1,11 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
+
+<p class="message">
+  You can rename or delete this example page as you see necessary.
+</p>
 
 Hello, fellow buddy!
 
