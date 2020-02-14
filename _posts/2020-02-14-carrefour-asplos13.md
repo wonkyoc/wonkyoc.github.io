@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Analysis of Carrefour
-date: 2020-02-09 12:30:45
+date: 2020-02-14
 categories: [Paper]
 tags: []
 link: http://www.fabiengaud.net/resources/dashti13traffic.pdf
-last_modified_at: 2020-02-11
+last_modified_at: 2020-02-14
 ---
 
 ### Problem
