@@ -71,13 +71,37 @@ replication 은 총 세 가지의 오버헤드가 있다. 첫 번째 오버헤�
 * PARSEC v2.1
 * map/reduce Metis suites
 
+*CPU utilization 이 33% 이하인 워크로드들은 메모리 정책에 영향을 받지 않기 때문에 선택되지 않았다.*
+
 **Testbed**
 * Machine A - 4 cores x 4 nodes = 16 cores
 * Machine B - 6 cores x 4 nodes = 24 cores
 
 #### Single-application workloads
+*Carrefour* 는 *default linux* 보다 항상 좋으며 *interleave* 보다 안 좋을 때도 있지만 대부분의 어플리케이션에서 *interleave* 보다 좋은 성능을 보였다. 그 이유는 *Carrefour* 가 memory locality 를 잘 고려했기 때문이다. Figure 8(b) 의 그래프를 보면 Local memory access ratio 를 확인할 수 있는데 *Carrefour* 가 *interleave* 보다 당연히 월등한 수치를 보였으며 이 때문에 Figure 8(a) 에서 보이는 것처럼 memory latency 가 많이 감소하였다. 따라서 이러한 요인으로 *interleave* 보다 *Carrefour* 가 좋은 성능을 보인 것이다.
 
 #### Multi-application workloads
+**Workloads**
+* MG + Streamcluster
+* PCA + Streamcluster
+* FaceRecLong + Streamcluster
+각 워크로드들은 두 노드씩 나누어 실행되었다. 예를 들어 Machin A 의 경우 4 cores x 4 nodes 이므로 MG + Streamcluster 의 예에서 MG(8 cores) + Streamcluster(8 cores) 씩 할당하였다.
+
+각 어플리케이션들은 다른 어플리케이션의 메모리를 침범하지않고 interleaving 방식을 사용하였으며 이에 대한 단서는 아래 글귀에서 찾을 수 있다.
+> The reason why Manual interelaving performs relatively well in these scenarios is because, with each application using two domains, there is a lot less cross-domain traffic than in the single-applictaion case.
+
+Multi-application 실험에서도 마찬가지로 memory balancing 및 memory latency reduction 때문에 *Carrefour* 가 성능 향상을 보여주었음을 이야기한다.
+
+#### Overhead
+*Carrefour* 는 CPU overhead 와 Memory overhead 를 가진다.
+
+**CPU overhead**  
+* Periodic IBS Sampling: 0.2% - 3.2% overhead
+* collapse 가 발생할 때 생기며 발생할 경우 lock contention 때문에 few millisecond 정도 오버헤드가 생긴다.
+
+**Memory overhead**  
+* profiling data 자료구조가 차지하는 메모리 오버헤드가 있다. - 5MB
+* replication 을 할 경우 생성되는 복사본의 메모리 오버헤드가 있다. - 평균 300MB 이며 application specific
 
 ### Reference
 * [Paper](http://www.fabiengaud.net/resources/dashti13traffic.pdf)
