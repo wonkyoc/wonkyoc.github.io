@@ -31,6 +31,13 @@ CONFIG_KGDB_SERIAL_CONSOLE=y
 ...
 {% endhighlight %}
 
+`qemu-system-x86_64` 명령어를 실행하면 보통 실행 권한이 없다는 오류 메세지를 띄우므로
+사용자를 `kvm` 그룹에 넣어준다.
+{% highlight shell %}
+$ sudo adduser $USER kvm
+{% endhighlight %}
+
+
 
 #### QEMU side
 {% highlight shell %}
@@ -53,3 +60,4 @@ $ gdb -ex 'file vmlinux' -ex 'target remote localhost:1234'
 ### Reference
 * [Speed up your kernel development cycle with QEMU](https://vmsplice.net/~stefan/stefanha-kernel-recipes-2015.pdf)
 * []http://landley.net/kdocs/Documentation/DocBook/xhtml-nochunks/kgdb.html
+* [How to build a custom linux kernel for qemu](https://mudongliang.github.io/2017/09/12/how-to-build-a-custom-linux-kernel-for-qemu.html)
