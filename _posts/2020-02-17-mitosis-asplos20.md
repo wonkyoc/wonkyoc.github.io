@@ -58,10 +58,54 @@ __Migration__
 * Load-balancing 에 의해 스레드가 migration 될 때 page table 도 같이 하여 remote access 를 없앰
 
 ### Implementation
+#### replication
+__Allocation__
+_Mitosis_ 는 page-fault 방식으로 page table 을 allocation 하며 Kernel 의 allocation 과는 조금 다르게 per-socket page-cache 들을 지정하여 page table 을 allocation 한다. 만약 이 page-cache 공간이 부족하면 현재는 oom 이 발생한다.
 
+__Consistency__
+OS 에서는 mmap/unmap/protect 등의 interface 로 page-table 을 업데이트하며 일반적으로 4개의 page table 있다면 N-Socket 에서 4N 만큼 memory access 를 해야한다. _Mitosis_ 에서는 physical page pointer 를 가지고 있는 page meta-data 를 circular list 자료구조로 만들어 memory access overhead 를 줄였다. 이러한 구현은 replica 에 한 번, pointer 읽기에 한 번, 더 해서 총 2번의 memory access 를 한다. 만약 N-Socket 이면 2N만큼 memory access 를 한다.
+
+_Mitosis_ 는 이러한 메카니즘을 새로운 memory subsystem 을 대신에 PV-Ops 를 사용하여 구현하였다. PV-Ops란 원래 Xen 같은 Hypervisor 들이 버전에 상관없이 사용되기 위해 구현된 인터페이스인데 이 인터페이스를 사용하면 page allocation/deallocation 등을 사용할 수 있기 때문에 이것을 조금 변형하여 사용한 것 같다.
+
+__그 외__
+* context switching 이 발생하면 processor 는 local page table 이 존재하면 그것을 사용하도록 한다. (enable/disable)
+* access / dirty bit 은 replication 의 경우 간단하게 OR 연산을 하여 OS 가 read 시 설정한다.
+    * page entry 를 읽는 인터페이스는 PV-ops 에 없기 때문에 추가로 구현하였다.
+
+### Policy
+* sysctl 의 옵션은 _Mitosis_ on/off per processor or all processors, 한 노드에 page table 고정하기로 구성된다.
+* libnuma / numactl 에선 설정된 bitmask 에 replica 가 생성되도록 하는 기능이 구현되었다.
+
+### Discussion
+* _Mitosis_ 는 THP extension 을 사용하여 large page 를 지원하지만 성능 이득이 크진 않다.
+* [37] 기사...: gPT / nPT 모두 acccess / dirty bit 을 설정할 수 있는데 _Mitosis_ 의 OR 기능을 사용하면 정확한 정보를 얻을 수 있을 것이다.
+* Barrelfish 에서도 비슷한 느낌으로 memory management subsystem 을 user 에서 사용하였다.
 
 ### Evauation
+__HW Configuration__  
+* Intel Xeon E7-4850v3 with 14 cores
+* 512GB (128GB memory per-socket)
+
+#### Multi-socket Scenario
+* 약 40% 정도 CPU cycle 이 TLB miss handling 에서 발생한다는 사실을 깨달았다.
+* 여러 워크로드 중 Canneal 에서 가장 많은 성능 향상을 보였다. (1.34x)
+
+#### Workload Migration Scenario
+* AutoNUMA disable
+* page table 이 remote allocation 될 때 _Mitosis_ enabled
+* remote page-table 이 1.4x - 3.2x slowdown 을 발생시키는데 _Mitosis_ 는 이것을 없앨 수 있다.
+* Memomry Fragmentation Evaluation
+    * custom benchmark 사용
+    * khugepaged, kcompactd active
+    * fragmentation 이 심할 경우 THP 가 4KB 로 바뀌는 경우가 많아서 성능이 많이 떨어진다.
+    * remote page table 이 있는 경우 local 로 replica 를 만들기 때문에 역시나 _Mitosis_ 에서 좋은 성능을 보인다.
+* 
+
+#### Space and Runtime Overheads
+
 
 ### Reference
 * [Paper](http://www.cs.yale.edu/homes/abhishek/jgandhi-asplos20.pdf)
 * [GitHub](https://github.com/mitosis-project/mitosis-asplos20-artifact)
+* [pv-ops](https://blogs.gnome.org/markmc/category/pv_ops/)
+* [Barrelfish](http://www.barrelfish.org/)
