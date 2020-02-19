@@ -99,10 +99,10 @@ __HW Configuration__
     * khugepaged, kcompactd active
     * fragmentation 이 심할 경우 THP 가 4KB 로 바뀌는 경우가 많아서 성능이 많이 떨어진다.
     * remote page table 이 있는 경우 local 로 replica 를 만들기 때문에 역시나 _Mitosis_ 에서 좋은 성능을 보인다.
-* 
 
 #### Space and Runtime Overheads
-
+* 16 replica 에서 Memory overheads 2.9% 밖에 되지 않으므로 memory overhead 가 크지 않다.
+* low-level VMA operation 중 mprotect 의 overhead 가 많이 큰데 (3.2x in 4GB region with 4 replicas) 만약 workload 들이 write intensive 일 경우 상당한 overhead 가 있을 것으로 생각된다. 
 
 ### Reference
 * [Paper](http://www.cs.yale.edu/homes/abhishek/jgandhi-asplos20.pdf)
