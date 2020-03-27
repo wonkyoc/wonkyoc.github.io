@@ -3,14 +3,10 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  You can rename or delete this example page as you see necessary.
-</p>
+**Who**
+* Master's student at [Ajou Univ.](http://www.ajou.ac.kr/en)
+* Software Engineer
 
-Hello, fellow buddy!
-
-Thanks for visiting my blog. You may find useful contents or useless one (The useless may be useful for someone!)
-
-I'm a master student and software devleoper. I'm currently studying at [Ajou Univ.](http://www.ajou.ac.kr)
-I live in Suwon, South Korea. I love Bach, Schubert, Chopin, especially but overall, I love all classical musics.
-When it comes to technology or computer matter, I love Python, systematic architecture and Vim.
+__Like__ :heart:
+* Vim
+* Unix/Linux

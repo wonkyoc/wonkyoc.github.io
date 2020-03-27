@@ -9,3 +9,6 @@ collections:
   pages:
     output: true
     permalink: /:name
+
+plugins:
+  - jemoji
