@@ -3,64 +3,13 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-<h1 class="post-title">
-<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title | smartify }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
-</h1>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
-
-    {% if post %}
-    {% assign categories = post.categories %}
-    {% else %}
-    {% assign categories = page.categories %}
-    {% endif %}
-    {% for category in categories %}
-    in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-    {% unless forloop.last %}&nbsp;{% endunless %}
-    {% endfor %}
-
-    {%- if post.last_modified_at -%}
-    <i>(Last updated: {{ post.last_modified_at | date_to_string }})</i>
-    {%- endif -%}
-    </time>
-
-<span class="permalink">
-{% if post.link %}
-<a href="{{ post.url }}">Permalink</a>
-{% endif %}
-</span>
-
-    {{ post.content | smartify }}
-	
-  <br>
-  <div class="tag-list">
-  {% if post %}
-  {% assign tags = post.tags %}
-  {% else %}
-  {% assign tags = page.tags %}
-  {% endif %}
-  {% for tag in tags %}
-  <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">#{{tag}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
+<section class="posts">
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time>
+    </li>
   {% endfor %}
-  </div>
-	
-  </article>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
+  </ul>
+</section>
