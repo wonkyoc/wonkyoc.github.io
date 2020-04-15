@@ -12,7 +12,7 @@ title: Categories
   <a name="{{ category_name | slugize }}"></a>
   {% for post in site.categories[category_name] %}
   <article class="archive-item">
-    <a href="{{ post.url }}">{{ post.title }}{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}</a>
+    <a href="{{ post.url }}">{{ post.title }}</a>
   </article>
 {% endfor %}
 </div>
