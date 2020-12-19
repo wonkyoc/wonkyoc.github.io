@@ -6,22 +6,19 @@ layout: compress
 <html lang="en">
   {% include header.html %}
   <body>
-    <section class="banner">
-      <!-- Only for color -->
-    </section>
-
-    <header class="title-wrapper">
+    <!-- <header class="title-wrapper">
       <h2 class="title">
         <a href="{{ site.baseurl }}/" title="home">{{ site.title }}</a>
       </h2> 
       <small>{{ site.tagline }}</small>
-    </header>
+    </header> -->
     <main>
-      {% include navigation.html %}
-      {{ content }}
+      {% include left.html %}
+      <div class="right-side">
+        {% include intro.html %}
+        {% include publications.html %}
+      </div>
     </main>
-
-    {% include footer.html %}
 
     {% if site.ga_analytics %}
      <script>

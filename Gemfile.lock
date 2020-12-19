@@ -86,12 +86,13 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.1.0)
+  bundler (~> 2.2.0)
   jemoji
   mrpurple!
   rake (~> 12.0)
 
 BUNDLED WITH
-   2.1.4
+   2.2.1

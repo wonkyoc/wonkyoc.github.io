@@ -1,0 +1,6 @@
+journals:
+  - title: A Study of Memory Placement on Hardware-Assisted Tiered Memory Systems
+    link: /assets/documents/choe-cal20.pdf 
+    journal: "IEEE Computer Architecture Letters ( Volume: 19, Issue: 2, July-Dec. 1 2020)"
+    short-journal: CAL'20
+    authors: Wonkyo Choe, Jonghyeon Kim, Jeongseob Ahn

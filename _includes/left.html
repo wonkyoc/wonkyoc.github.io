@@ -1,0 +1,28 @@
+<header role="banner">
+  <figure>
+    <img src="assets/profile.png" alt="profile">
+    <figcaption>Temporal profile</figcaption>
+  </figure>
+  <div class="info">
+    <h1 class="name">Wonkyo Choe</h1>
+    <div class="email">Email: heysid (at) ajou (dot) ac (dot) kr</div>
+    <ul>
+      <li><a href="assets/documents/cv.pdf" target="blank" class="doc">[Curriculum Vitae]</a></li>
+    </ul>
+  </div>
+  <div class="horizontal-line"></div>
+  <div class="sns">
+    <ul>
+      <li><a href="https://github.com/wonkyoc" target="blank" class="account">[Github]</a> 
+      <li><a href="https://www.linkedin.com/in/wonkyo-choe" target="blank" class="account">[LinkedIn]</a> 
+    </ul>
+  </div>
+  <div class="horizontal-line"></div>
+  <nav role="navigation">
+    <ul>
+    {% for item in site.data.navigation.links %}
+      <li><a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+</header>
