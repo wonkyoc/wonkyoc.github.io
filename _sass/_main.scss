@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Monserrat', sans-serif;
 	-webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 	line-height:1.5;
@@ -62,6 +62,7 @@ pre {
 
 img {
 	max-width:100%;
+	border-radius: 10%;
 }
 
 hr {
@@ -154,18 +155,33 @@ strong, b {
 }
 
 main {
-	display:flex;
+	display: flex;
 	max-width:100rem;
 	margin:2rem auto;
 	padding:1rem;
 	padding-top: 4rem;
-	@media screen and (max-width: 400px) {
-		flex-wrap:wrap;
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		flex-direction: column;
+
+		.left {
+			width: 100%;
+		}
+
+		.right {
+			width: 100%;
+			margin: 0;
+			#bio {
+				padding-bottom: 1rem;
+			}
+		}
 	}
 }
 
 
-@media screen and (max-width: 45rem ) {
+@media screen and (min-width: 1024px) {
 header li {
     display: inline;
 	margin-right: 1rem;
@@ -217,44 +233,17 @@ figcaption {
     font-size: smaller;
 }
 
-
-.right-side {
-	flex-grow: 4;
-	padding: 16px;
-
-	.section {
-		padding-bottom: 3rem;
+.left {
+	order: 0;
+	width: 30%;
+	
+	ul {
+		list-style-type: none;
 	}
-}
-
-.right-side #intro {
-	padding-bottom: 10rem;
-	padding-right: 5rem;
 }
 
 .name, .email {
 	text-align: center;
-}
-
-.title-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 53rem;
-
-	.title {
-		width: 80%;
-		font-weight: 600;
-	}
-
-	.short-jounral {
-		padding: 0px 10px 0px 10px;
-		width: 20%;
-		
-	}
-}
-
-.paper {
-	padding-bottom: 2rem;
 }
 
 .info {
@@ -288,7 +277,43 @@ figcaption {
 	margin: 0 3rem 0 3rem;
 }
 
+.right {
+	order: 1;
+	width: 60%;
+	padding: 16px;
+	margin-left: 3rem;
+
+	.section {
+		padding-bottom: 3rem;
+	}
+}
+
+.right #bio {
+	padding-bottom: 10rem;
+	text-align: justify;
+}
+
+
+.paper {
+	display: flex;
+	padding-bottom: 2rem;
+
+	.paper-left {
+		order: 0;
+		.title {
+			font-weight: 600;
+		}
+	}
+
+	.paper-right {
+		margin-left: 10%;
+		text-align: center;
+		order: 1;
+	}
+}
+
 @import "functions";
 @import "variables";
 @import "buttons";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
