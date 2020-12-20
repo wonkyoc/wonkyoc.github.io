@@ -71,29 +71,6 @@ hr {
     border: 0;
 }
 
-header {
-	flex-basis:70rem;
-	flex-grow:1;
-	// position:relative;
-}
-
-header a {
-	text-decoration: none;
-}
-
-header li {
-	margin-bottom: .2rem;
-	margin-right: 2rem;
-}
-
-header a.active {
-	font-weight: bold;
-}
-
-header,section {
-	padding:1rem;
-}
-
 blockquote {
 	font-style: italic;
     border-left: 5px solid #ececec;
@@ -202,6 +179,17 @@ header ul {
 
 nav {
 	padding: 16px;
+	li {
+		transition: 0.4s;
+		margin: 0 5rem 0 5rem;
+		a {
+			text-decoration: none;
+		}
+	}
+	li:hover {
+		background: #ececec;
+		font-weight: 800;
+	}
 }
 
 nav ul li{
