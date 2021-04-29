@@ -1,3 +1,11 @@
+conferences:
+  - title: Exploring the Design Space of Page Management for Multi-Tiered Memory Systems (To appear)
+    link: 
+    conference: "2021 USENIX Annual Technical Conference"
+    short-conference: ATC'21
+    authors: Jonghyeon Kim, Wonkyo Choe, Jeongseob Ahn
+
+
 journals:
   - title: A Study of Memory Placement on Hardware-Assisted Tiered Memory Systems
     link: https://ieeexplore.ieee.org/document/9165024

@@ -1,5 +1,22 @@
 <div class="section">
     <h2 id="publications">Publications</h2>
+    <div id="conferences">
+        <h3>Conferences</h3>
+        <ul style="list-style-type:none">
+        {% for item in site.data.publications.conferences %}
+        <li class="paper">
+            <div class="paper-left">
+                <div class="title">{{ item.title }}</div>
+                <div class="conference"><i>{{ item.conference }}</i></div>
+                <div class="authors">{{ item.authors }}</div>
+            </div>
+            <div class="paper-right">
+                <div class="short-conference"><b>{{ item.short-conference }}</b></div>
+            </div>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
     <div id="journals">
         <h3>Journals</h3>
         <ul style="list-style-type:none">
