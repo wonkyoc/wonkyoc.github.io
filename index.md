@@ -13,13 +13,13 @@ I was a member of CSL at Ajou University and my advisor was Prof. [JeongSeob Ahn
 - **Computer Architecture:** memory systems
 
 ## Publications
-- **Rethinking Remote Memory Placement on Large-Memory Systems with Path Diversity** (To appear)
+- **Rethinking Remote Memory Placement on Large-Memory Systems with Path Diversity**
   <br>
   **Wonkyo Choe**\*, Sang-Hoon Kim, Jeongseob Ahn
   <br>
   ACM Asia-Pacific Workshop on Systems **APSys 2021**.
   <br>
-  [[PDF]()]
+  [[PDF](https://dl.acm.org/doi/10.1145/3476886.3477516)]
 
 - **Exploring the Design Space of Page Management for Multi-Tiered Memory Systems**
   <br>
@@ -37,3 +37,7 @@ I was a member of CSL at Ajou University and my advisor was Prof. [JeongSeob Ahn
   <br>
   [[PDF](https://ieeexplore.ieee.org/document/9165024)]
 
+## Useful Links
+### For PhD
+- [Doing a Systems PhD](https://www.cl.cam.ac.uk/research/srg/netos/eurosys11dw/keynote/StevenHand.pdf)
+- [How to write a great research paper](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/)
