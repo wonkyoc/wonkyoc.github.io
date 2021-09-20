@@ -41,3 +41,4 @@ I was a member of CSL at Ajou University and my advisor was Prof. [JeongSeob Ahn
 ### For PhD
 - [Doing a Systems PhD](https://www.cl.cam.ac.uk/research/srg/netos/eurosys11dw/keynote/StevenHand.pdf)
 - [How to write a great research paper](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/)
+- [A quick guide to LaTeX](./assets/etc/A_quick_guide_to_LaTeX.pdf)
