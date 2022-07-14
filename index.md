@@ -41,3 +41,4 @@ My past projects were mainly related to persistent memory and memory management 
 - [How to Look for Ideas in Computer Science Research](https://medium.com/digital-diplomacy/how-to-look-for-ideas-in-computer-science-research-7a3fa6f4696f)
 - [How to Read a CS Research Paper?](http://zhaoxiahust.github.io/blog/reading-paper.pdf)
 - [How (and How Not) to Write a Good Systems Paper](https://www.usenix.org/legacy/events/samples/submit/advice_old.html)
+- [A quick guide to LaTeX](./assets/etc/A_quick_guide_to_LaTeX.pdf)
