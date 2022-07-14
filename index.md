@@ -2,15 +2,11 @@
 layout: homepage
 ---
 
-## About Me
-
-I am a 1st-year Ph.D. student at University of Virginia (UVa). I am currently working with Prof. [Samira Khan](https://www.cs.virginia.edu/~smk9u/index.html).
+I am a 1st-year Ph.D. student at University of Virginia (UVa). 
 I was a member of CSL at Ajou University and my advisor was Prof. [JeongSeob Ahn](https://sites.google.com/view/cslajou/).
+I am currently interested in computer systems in various domains.
 
-## Research Interests
-
-- **Operating Systems:** Linux
-- **Computer Architecture:** memory systems
+My past projects were mainly related to persistent memory and memory management in a NUMA architecture.
 
 ## Publications
 - **Rethinking Remote Memory Placement on Large-Memory Systems with Path Diversity**
@@ -41,3 +37,7 @@ I was a member of CSL at Ajou University and my advisor was Prof. [JeongSeob Ahn
 ### For PhD
 - [Doing a Systems PhD](https://www.cl.cam.ac.uk/research/srg/netos/eurosys11dw/keynote/StevenHand.pdf)
 - [How to write a great research paper](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/)
+- [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
+- [How to Look for Ideas in Computer Science Research](https://medium.com/digital-diplomacy/how-to-look-for-ideas-in-computer-science-research-7a3fa6f4696f)
+- [How to Read a CS Research Paper?](http://zhaoxiahust.github.io/blog/reading-paper.pdf)
+- [How (and How Not) to Write a Good Systems Paper](https://www.usenix.org/legacy/events/samples/submit/advice_old.html)
