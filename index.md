@@ -2,11 +2,10 @@
 layout: homepage
 ---
 
-I am a 5th year Ph.D. student at University of Virginia, working with Prof. Felix Xiazhu Lin.
-My current research interests lie in **AI/Systems**.
-My past research projects are related to low-level optimization on the Linux Kernel.
-
-**<span style="color:blue">I am seeking Spring/Summer AI/System Internship opportunities for 2026. Please feel free to reach out to me!</span>**
+I am a Ph.D. student at the University of Virginia, advised by Prof. Felix Xiaozhu Lin.
+My research lies at the intersection of **Systems and Machine Learning**, 
+focusing on efficient inference frameworks that minimize latency and memory consumption. 
+Previously, I have worked on low-level optimizations in the Linux kernel.
 
 
 
