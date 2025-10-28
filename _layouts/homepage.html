@@ -42,10 +42,30 @@
         <br>
         {{ site.email }}
         <br>
-        <br>
         {% endif %}
 
       </header>
+      <footer>
+        <div class="social-icons">
+
+          {% if site.linkedin %}
+          <a href="{{ site.linkedin }}" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          {% endif %}
+          {% if site.google_scholar %}
+          <a href="{{ site.google_scholar}}" target="_blank">
+            <i class="ai ai-google-scholar" style="font-size:1.6rem"></i>
+          </a>
+          {% endif %}
+          {% if site.github_link %}            
+          <a href="{{ site.github_link }}" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+        </div>
+        <br>
+      </footer>
         <!-- Clean Vintage Style Job-Seeking Banner -->
         <div style="
           background-color:#fdf6e3;
@@ -73,29 +93,6 @@
       <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
 
       </section>
-      <footer>
-        <div class="social-icons">
-
-          {% if site.linkedin %}
-          <a href="{{ site.linkedin }}" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          {% endif %}
-          {% if site.google_scholar %}
-          <a href="{{ site.google_scholar}}" target="_blank">
-            <i class="ai ai-google-scholar" style="font-size:1.6rem"></i>
-          </a>
-          {% endif %}
-          {% if site.github_link %}            
-          <a href="{{ site.github_link }}" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          {% endif %}
-        </div>
-        <br>
-        <br>
-        <br>
-      </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}

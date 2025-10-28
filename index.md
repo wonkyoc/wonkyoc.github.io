@@ -10,6 +10,11 @@ Previously, I have worked on low-level optimizations in the Linux kernel.
 
 
 ## Publications
+- **Efficient Sparsity Management for LLMs** (under review)
+    <br>
+    Wonkyo Choe, Felix Xiaozhu Lin
+    <br>
+
 - **Proto: A Guided Journey through Modern OS Construction** (SOSP'25)
     <br>
     Wonkyo Choe\*, Rongxiang Wang\*, Afsara Benazir\*, Felix Xiaozhu Lin 
@@ -17,6 +22,13 @@ Previously, I have worked on low-level optimizations in the Linux kernel.
     (* = equal contribution)
     <br>
     [[PDF](https://dl.acm.org/doi/10.1145/3731569.3764811)]
+
+- **RWKV-Lite: Deeply Compressed RWKV for Resource-Constrained Devices** (arxiv)
+    <br>
+    Wonkyo Choe, Yangfeng Ji, Felix Xiaozhu Lin 
+    <br>
+    [[PDF](https://arxiv.org/abs/2412.10856)]
+
 
 - **AnA: An Attentive Autonomous Driving System**  (ASPLOS'25)
     <br>
