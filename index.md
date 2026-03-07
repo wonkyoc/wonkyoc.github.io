@@ -10,7 +10,7 @@ Previously, I have worked on low-level optimizations in the Linux kernel.
 
 
 ## Publications
-- **Efficient Sparsity Management for LLMs** (under review)
+- **SpMAP: Transparent Sparsity for LLMs** (MobiSys'26)
     <br>
     Wonkyo Choe, Felix Xiaozhu Lin
     <br>
