@@ -2,16 +2,14 @@
 layout: homepage
 ---
 
-I am a final year Ph.D. Candidate at the University of Virginia, advised by Prof. Felix Xiaozhu Lin.
-My research lies at the intersection of **Systems and Machine Learning**, currently
-focusing on efficient system infrastructures that manage multiple resources.
+I am a final-year Ph.D. candidate at the University of Virginia, advised by Prof. Felix Xiaozhu Lin.
+I work at the intersection of **Systems and Machine Learning**, building efficient
+infrastructure that coordinates compute and memory so that large models run faster
+and at lower cost, from datacenters down to edge and mobile devices.
 
-Previously, I worked on low-level memory optimizations 
-for multi-CPU nodes and persistent memory environments.
-
-[**Curriculum Vitae (PDF)**](./assets/cv.pdf)
-
-
+Before that, I focused on low-level memory optimizations for multi-CPU and
+persistent-memory systems, studying how data placement across tiered and remote
+memory shapes performance.
 
 ## Selected publications
 - **SpMAP: Transparent Sparsity for LLMs** (MobiSys'26)
