@@ -58,9 +58,14 @@
             <i class="ai ai-google-scholar" style="font-size:1.6rem"></i>
           </a>
           {% endif %}
-          {% if site.github_link %}            
+          {% if site.github_link %}
           <a href="{{ site.github_link }}" target="_blank">
             <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if site.cv %}
+          <a href="{{ site.cv }}" target="_blank" title="Curriculum Vitae">
+            <i class="fas fa-file-pdf"></i>
           </a>
           {% endif %}
         </div>

@@ -2,14 +2,13 @@ title: Wonkyo Choe
 position: Ph.D. Candidate
 affiliation: University of Virginia
 email: wonkyochoe@virginia.edu
-keywords: minimal academic
+keywords: systems, machine learning, LLM efficiency, OS, mobile systems, edge computing
 google_scholar: https://scholar.google.com/citations?user=8E-_lSQAAAAJ&hl=en
 github_link: https://github.com/wonkyoc
 linkedin: https://www.linkedin.com/in/wonkyo-choe
+cv: ./assets/cv.pdf
 avatar: ./assets/img/profile_2.jpg
-google_analytics: UA-111540567-4
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light.yyliu.net/
+description: Ph.D. Candidate at the University of Virginia researching systems and machine learning efficiency.
 remote_theme: yaoyao-liu/minimal-light

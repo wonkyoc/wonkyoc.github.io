@@ -2,18 +2,23 @@
 layout: homepage
 ---
 
-I am a Ph.D. student at the University of Virginia, advised by Prof. Felix Xiaozhu Lin.
-My research lies at the intersection of **Systems and Machine Learning**, 
-focusing on efficient inference frameworks that minimize latency and memory consumption. 
-Previously, I have worked on low-level optimizations in the Linux kernel.
+I am a final year Ph.D. Candidate at the University of Virginia, advised by Prof. Felix Xiaozhu Lin.
+My research lies at the intersection of **Systems and Machine Learning**, currently
+focusing on efficient system infrastructures that manage multiple resources.
+
+Previously, I worked on low-level memory optimizations 
+for multi-CPU nodes and persistent memory environments.
+
+[**Curriculum Vitae (PDF)**](./assets/cv.pdf)
 
 
 
-## Publications
+## Selected publications
 - **SpMAP: Transparent Sparsity for LLMs** (MobiSys'26)
     <br>
     Wonkyo Choe, Felix Xiaozhu Lin
     <br>
+    [[PDF](https://dl.acm.org/doi/10.1145/3745756.3809197)]
 
 - **Proto: A Guided Journey through Modern OS Construction** (SOSP'25)
     <br>
@@ -23,11 +28,6 @@ Previously, I have worked on low-level optimizations in the Linux kernel.
     <br>
     [[PDF](https://dl.acm.org/doi/10.1145/3731569.3764811)]
 
-- **RWKV-Lite: Deeply Compressed RWKV for Resource-Constrained Devices** (arxiv)
-    <br>
-    Wonkyo Choe, Yangfeng Ji, Felix Xiaozhu Lin 
-    <br>
-    [[PDF](https://arxiv.org/abs/2412.10856)]
 
 
 - **AnA: An Attentive Autonomous Driving System**  (ASPLOS'25)
@@ -35,6 +35,13 @@ Previously, I have worked on low-level optimizations in the Linux kernel.
     Wonkyo Choe, Rongxiang Wang, Felix Xiaozhu Lin
     <br>
     [[PDF](https://dl.acm.org/doi/10.1145/3669940.3707261)]
+
+## Other publications
+- **RWKV-Lite: Deeply Compressed RWKV for Resource-Constrained Devices** (arxiv)
+    <br>
+    Wonkyo Choe, Yangfeng Ji, Felix Xiaozhu Lin 
+    <br>
+    [[PDF](https://arxiv.org/abs/2412.10856)]
 
 - **Efficient NLP Inference at the Edge via Elastic Pipelining** (ASPLOS'23)
     <br>
