@@ -11,6 +11,13 @@ Before that, I focused on low-level memory optimizations for multi-CPU and
 persistent-memory systems, studying how data placement across tiered and remote
 memory shapes performance.
 
+## Ongoing projects
+- **Resource handover on Kubernetes** *(in preparation)*
+    <br>
+    Wonkyo Choe, Felix Xiaozhu Lin
+    <br>
+    Mitigating the performance degradation that AI workloads suffer during resource handover on Kubernetes.
+
 ## Selected publications
 - **SpMAP: Transparent Sparsity for LLMs** (MobiSys'26)
     <br>
@@ -18,6 +25,20 @@ memory shapes performance.
     <br>
     [[PDF](https://dl.acm.org/doi/10.1145/3745756.3809197)]
 
+- **RWKV-Lite: Deeply Compressed RWKV for Resource-Constrained Devices** (arxiv)
+    <br>
+    Wonkyo Choe, Yangfeng Ji, Felix Xiaozhu Lin 
+    <br>
+    [[PDF](https://arxiv.org/abs/2412.10856)]
+
+
+- **AnA: An Attentive Autonomous Driving System**  (ASPLOS'25)
+    <br>
+    Wonkyo Choe, Rongxiang Wang, Felix Xiaozhu Lin
+    <br>
+    [[PDF](https://dl.acm.org/doi/10.1145/3669940.3707261)]
+
+## Other publications
 - **Proto: A Guided Journey through Modern OS Construction** (SOSP'25)
     <br>
     Wonkyo Choe\*, Rongxiang Wang\*, Afsara Benazir\*, Felix Xiaozhu Lin 
@@ -28,18 +49,6 @@ memory shapes performance.
 
 
 
-- **AnA: An Attentive Autonomous Driving System**  (ASPLOS'25)
-    <br>
-    Wonkyo Choe, Rongxiang Wang, Felix Xiaozhu Lin
-    <br>
-    [[PDF](https://dl.acm.org/doi/10.1145/3669940.3707261)]
-
-## Other publications
-- **RWKV-Lite: Deeply Compressed RWKV for Resource-Constrained Devices** (arxiv)
-    <br>
-    Wonkyo Choe, Yangfeng Ji, Felix Xiaozhu Lin 
-    <br>
-    [[PDF](https://arxiv.org/abs/2412.10856)]
 
 - **Efficient NLP Inference at the Edge via Elastic Pipelining** (ASPLOS'23)
     <br>
